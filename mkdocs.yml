@@ -1,0 +1,113 @@
+site_name: FastAPI Mastery Path
+site_description: A structured FastAPI course from first endpoint to production — Pydantic v2 models, dependency injection, async, SQLAlchemy 2.x, auth, testing and deployment — with every example run for real.
+site_url: https://sigilipelli.github.io/fastapi-mastery-path/
+repo_url: https://github.com/sigilipelli/fastapi-mastery-path
+repo_name: fastapi-mastery-path
+
+theme:
+  name: material
+  favicon: assets/favicon.svg
+  custom_dir: docs/overrides
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: cyan
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: cyan
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.footer
+    - navigation.indexes
+    - toc.follow
+    - content.code.copy
+    - content.code.annotate
+    - search.suggest
+    - search.highlight
+
+markdown_extensions:
+  - admonition
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - toc:
+      permalink: true
+
+extra_css:
+  - stylesheets/extra.css
+  - stylesheets/progress-tracker.css
+
+extra_javascript:
+  - javascripts/progress-tracker.js
+
+nav:
+  - Home: index.md
+  - Privacy Policy: privacy.md
+  - License: license.md
+  - "Level 1 · Entry":
+      - Overview: level-1/index.md
+      - "01 · What FastAPI Is: ASGI, Starlette, Pydantic and One Request": level-1/01-what-fastapi-is.md
+      - "02 · Installing FastAPI & Your First App": level-1/02-first-app.md
+      - "03 · Path & Query Parameters": level-1/03-path-query-params.md
+      - "04 · Request Bodies with Pydantic Models": level-1/04-request-bodies.md
+      - "05 · Response Models & Status Codes": level-1/05-response-models.md
+      - "06 · Pydantic v2 in Depth: Fields, Validators & Serialization": level-1/06-pydantic-v2.md
+      - "07 · Errors: HTTPException, Validation Errors & Handlers": level-1/07-errors.md
+      - "08 · Forms, File Uploads, Headers & Cookies": level-1/08-forms-files-headers.md
+      - "09 · APIRouter & Project Structure": level-1/09-routers-structure.md
+      - "10 · Project — An In-Memory Notes API": level-1/10-project-notes-api.md
+  - "Level 2 · Intermediate":
+      - Overview: level-2/index.md
+      - "01 · Dependency Injection with Depends": level-2/01-dependency-injection.md
+      - "02 · Yield Dependencies, Caching & Overrides": level-2/02-yield-dependencies.md
+      - "03 · async def vs def: The Event Loop and the Threadpool": level-2/03-async-vs-sync.md
+      - "04 · SQLAlchemy 2.x with FastAPI": level-2/04-sqlalchemy.md
+      - "05 · Async SQLAlchemy, Relationships & N+1 Queries": level-2/05-async-sqlalchemy.md
+      - "06 · Database Migrations with Alembic": level-2/06-alembic.md
+      - "07 · Configuration with pydantic-settings": level-2/07-settings.md
+      - "08 · Testing with TestClient & pytest": level-2/08-testing.md
+      - "09 · Pagination, Filtering & Sorting": level-2/09-pagination-filtering.md
+      - "10 · Project — A Bookshelf API with a Database and Tests": level-2/10-project-bookshelf.md
+  - "Level 3 · Advanced":
+      - Overview: level-3/index.md
+      - "01 · Password Hashing & the OAuth2 Password Flow": level-3/01-password-auth.md
+      - "02 · JWT Access Tokens & Refresh Tokens": level-3/02-jwt.md
+      - "03 · Authorization: Scopes, Roles & Ownership": level-3/03-authorization.md
+      - "04 · Middleware & CORS": level-3/04-middleware-cors.md
+      - "05 · Lifespan Events & Background Tasks": level-3/05-lifespan-background.md
+      - "06 · WebSockets & Streaming Responses": level-3/06-websockets-streaming.md
+      - "07 · Shaping the OpenAPI Schema": level-3/07-openapi.md
+      - "08 · Async Tests & Isolated Test Databases": level-3/08-async-testing.md
+      - "09 · Caching, ETags & Rate Limiting": level-3/09-caching-rate-limiting.md
+      - "10 · Project — A Multi-User Authenticated API": level-3/10-project-auth-api.md
+  - "Level 4 · Master":
+      - Overview: level-4/index.md
+      - "01 · Performance: Finding Blocking Code and Measuring Throughput": level-4/01-performance.md
+      - "02 · Running in Production: Workers, Gunicorn & Containers": level-4/02-deployment.md
+      - "03 · Behind a Reverse Proxy: root_path, Forwarded Headers & HTTPS": level-4/03-reverse-proxy.md
+      - "04 · Observability: Structured Logs, Request IDs & Metrics": level-4/04-observability.md
+      - "05 · Security Hardening Against the OWASP API Top 10": level-4/05-security-hardening.md
+      - "06 · Versioning and Evolving an API": level-4/06-versioning.md
+      - "07 · Long-Running Work: Job Queues and Polling": level-4/07-job-queues.md
+      - "08 · Advanced Patterns: Sub-Applications, Custom Routes & Error Contracts": level-4/08-advanced-patterns.md
+      - "09 · Upgrading: Pydantic v1 to v2 and FastAPI Releases": level-4/09-upgrading.md
+      - "10 · Capstone — A Production-Ready Event Booking API": level-4/10-capstone.md
