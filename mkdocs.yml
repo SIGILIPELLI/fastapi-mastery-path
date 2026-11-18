@@ -1,6 +1,6 @@
 site_name: FastAPI Mastery Path
 site_description: A structured FastAPI course from first endpoint to production — Pydantic v2 models, dependency injection, async, SQLAlchemy 2.x, auth, testing and deployment — with every example run for real.
-site_url: https://sigilipelli.github.io/fastapi-mastery-path/
+site_url: https://learnmasterypath.com/fastapi-mastery-path/
 repo_url: https://github.com/sigilipelli/fastapi-mastery-path
 repo_name: fastapi-mastery-path
 

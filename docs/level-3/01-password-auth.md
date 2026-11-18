@@ -11,7 +11,7 @@ around. Lesson 2 replaces the server-side tokens used here with JWTs; lesson 3 a
 permissions.
 
 For the wider security picture — threat models, TLS, sessions vs tokens — see the
-[Cybersecurity Mastery Path](https://sigilipelli.github.io/cybersecurity-mastery-path/).
+[Cybersecurity Mastery Path](https://learnmasterypath.com/cybersecurity-mastery-path/).
 
 ## Never store passwords — store slow hashes
 

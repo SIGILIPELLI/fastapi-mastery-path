@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sigilipelli.github.io/fastapi-mastery-path/sitemap.xml
+Sitemap: https://learnmasterypath.com/fastapi-mastery-path/sitemap.xml

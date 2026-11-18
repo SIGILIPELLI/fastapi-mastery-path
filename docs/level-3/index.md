@@ -38,10 +38,10 @@ Three ideas carry this level:
 - **Levels 1 and 2** of this course: dependencies, yield dependencies, async SQLAlchemy,
   settings and testing are used throughout.
 - **Security basics** help: what hashing, signing and TLS are for. The
-  [Cybersecurity Mastery Path](https://sigilipelli.github.io/cybersecurity-mastery-path/)
+  [Cybersecurity Mastery Path](https://learnmasterypath.com/cybersecurity-mastery-path/)
   covers the background; this level focuses on implementing it in FastAPI.
 - **API design**: for status-code and resource-design conventions beyond what's covered
-  here, see the [REST API Mastery Path](https://sigilipelli.github.io/rest-api-mastery-path/).
+  here, see the [REST API Mastery Path](https://learnmasterypath.com/rest-api-mastery-path/).
 - Install: `pip install "fastapi[standard]" "pwdlib[argon2]" pyjwt "sqlalchemy[asyncio]" aiosqlite pytest`.
 
 ## How the examples were checked

@@ -208,7 +208,7 @@ then cached on the app object.
 FastAPI is a good fit for JSON APIs, internal services, ML model serving, and backends
 for single-page or mobile apps. It is a weaker fit when you want a batteries-included
 web application with server-rendered pages, an admin back office and an ORM chosen for
-you — that's the space [Django](https://sigilipelli.github.io/django-mastery-path/)
+you — that's the space [Django](https://learnmasterypath.com/django-mastery-path/)
 occupies. FastAPI can render templates (it bundles Jinja2 support from Starlette), but
 it's not its focus.
 

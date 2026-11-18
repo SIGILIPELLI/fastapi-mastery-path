@@ -12,7 +12,7 @@ shows the three failures you hit on the way, because you will hit them too.
 
 Tools: `pytest` (9.1.1 here), FastAPI's `TestClient`, and optionally `pytest-cov`
 (7.1.0). For pytest itself in depth, see the
-[Python Testing Mastery Path](https://sigilipelli.github.io/python-testing-mastery-path/).
+[Python Testing Mastery Path](https://learnmasterypath.com/python-testing-mastery-path/).
 
 ## The app under test
 

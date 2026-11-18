@@ -11,7 +11,7 @@ synchronous SQLAlchemy setup into FastAPI with SQLite; lesson 5 does the async v
 
 The examples ran on **SQLAlchemy 2.1.4**. The 2.0-style API used here (`Mapped`,
 `mapped_column`, `select()`, `Session.scalars`) is the same in every 2.x release. If you
-know SQL already, the [SQL Mastery Path](https://sigilipelli.github.io/sql-mastery-path/)
+know SQL already, the [SQL Mastery Path](https://learnmasterypath.com/sql-mastery-path/)
 explains what the generated statements do.
 
 ```bash

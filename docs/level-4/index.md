@@ -39,14 +39,14 @@ Three ideas carry this level:
 - **Levels 1–3** of this course. The capstone reuses async SQLAlchemy, Alembic, settings,
   JWT verification, scopes and the async test fixtures.
 - **Comfort with a terminal**: processes, signals, environment variables. The
-  [Shell Mastery Path](https://sigilipelli.github.io/shell-mastery-path/) and
-  [Server Ops Mastery Path](https://sigilipelli.github.io/server-ops-mastery-path/) cover
+  [Shell Mastery Path](https://learnmasterypath.com/shell-mastery-path/) and
+  [Server Ops Mastery Path](https://learnmasterypath.com/server-ops-mastery-path/) cover
   the background.
 - For containers and orchestration, see the
-  [Docker Mastery Path](https://sigilipelli.github.io/docker-mastery-path/) and
-  [Kubernetes Mastery Path](https://sigilipelli.github.io/kubernetes-mastery-path/); for
+  [Docker Mastery Path](https://learnmasterypath.com/docker-mastery-path/) and
+  [Kubernetes Mastery Path](https://learnmasterypath.com/kubernetes-mastery-path/); for
   the HTTP design side of versioning, the
-  [REST API Mastery Path](https://sigilipelli.github.io/rest-api-mastery-path/).
+  [REST API Mastery Path](https://learnmasterypath.com/rest-api-mastery-path/).
 
 ## How the examples were checked
 

@@ -150,7 +150,7 @@ knowing if your container's home directory is read-only.
 
 A Dockerfile for the Level 3 bookmarks project. **Docker wasn't available on the machine
 used for this course, so this file was not built or run**; it follows the patterns in
-the [Docker Mastery Path](https://sigilipelli.github.io/docker-mastery-path/) and the
+the [Docker Mastery Path](https://learnmasterypath.com/docker-mastery-path/) and the
 behaviour tested above.
 
 ```dockerfile

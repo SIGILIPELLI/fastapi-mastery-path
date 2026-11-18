@@ -37,9 +37,9 @@ Three ideas carry this level:
 - **Level 1 of this course**, or equivalent: request bodies, response models, routers,
   exception handlers.
 - **Basic SQL**: `SELECT`, `JOIN`, `WHERE`, indexes, constraints. The
-  [SQL Mastery Path](https://sigilipelli.github.io/sql-mastery-path/) covers it.
+  [SQL Mastery Path](https://learnmasterypath.com/sql-mastery-path/) covers it.
 - **pytest basics**: fixtures and `assert`. The
-  [Python Testing Mastery Path](https://sigilipelli.github.io/python-testing-mastery-path/)
+  [Python Testing Mastery Path](https://learnmasterypath.com/python-testing-mastery-path/)
   goes deeper.
 - Install: `pip install "fastapi[standard]" "sqlalchemy[asyncio]" aiosqlite alembic pydantic-settings pytest`.
 

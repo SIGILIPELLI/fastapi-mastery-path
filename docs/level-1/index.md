@@ -37,9 +37,9 @@ Three ideas carry you through all ten modules:
 - **Python fundamentals:** functions, classes, type hints, modules, virtual
   environments. FastAPI leans on type hints more than any other framework; if
   `list[str] | None` looks unfamiliar, work through
-  [Python Mastery Path](https://sigilipelli.github.io/python-mastery-path/) first.
+  [Python Mastery Path](https://learnmasterypath.com/python-mastery-path/) first.
 - **HTTP basics:** methods, status codes, headers, JSON. The
-  [REST API Mastery Path](https://sigilipelli.github.io/rest-api-mastery-path/) covers
+  [REST API Mastery Path](https://learnmasterypath.com/rest-api-mastery-path/) covers
   API design in depth; this course focuses on implementing it in FastAPI.
 - Python 3.10 or newer (the `X | None` syntax needs it). The examples were run on 3.14.
 - `curl` or any HTTP client. Every endpoint can also be exercised from `/docs`.
