@@ -6,6 +6,7 @@ repo_name: fastapi-mastery-path
 
 theme:
   name: material
+  font: false
   favicon: assets/favicon.svg
   custom_dir: docs/overrides
   palette:
@@ -24,6 +25,7 @@ theme:
         icon: material/brightness-4
         name: Switch to light mode
   features:
+    - navigation.path
     - navigation.tabs
     - navigation.sections
     - navigation.expand
@@ -58,6 +60,22 @@ extra_css:
 
 extra_javascript:
   - javascripts/progress-tracker.js
+
+
+
+
+extra:
+  related:
+    - name: "React"
+      url: https://learnmasterypath.com/react-mastery-path/
+    - name: "Next.js"
+      url: https://learnmasterypath.com/nextjs-mastery-path/
+    - name: "Angular"
+      url: https://learnmasterypath.com/angular-mastery-path/
+    - name: "Vue.js"
+      url: https://learnmasterypath.com/vue-mastery-path/
+    - name: "HTML & CSS"
+      url: https://learnmasterypath.com/html-css-mastery-path/
 
 nav:
   - Home: index.md
