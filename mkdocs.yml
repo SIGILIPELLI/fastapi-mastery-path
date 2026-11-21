@@ -57,9 +57,11 @@ markdown_extensions:
 extra_css:
   - stylesheets/extra.css
   - stylesheets/progress-tracker.css
+  - stylesheets/final-quiz.css
 
 extra_javascript:
   - javascripts/progress-tracker.js
+  - javascripts/final-quiz.js
 
 
 
@@ -131,3 +133,5 @@ nav:
       - "08 · Advanced Patterns: Sub-Applications, Custom Routes & Error Contracts": level-4/08-advanced-patterns.md
       - "09 · Upgrading: Pydantic v1 to v2 and FastAPI Releases": level-4/09-upgrading.md
       - "10 · Capstone — A Production-Ready Event Booking API": level-4/10-capstone.md
+  - "🎯 Final Quiz": quiz.md
+
