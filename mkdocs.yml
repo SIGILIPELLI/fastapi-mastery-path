@@ -87,8 +87,8 @@ not_in_nav: |
 
 nav:
   - Home: index.md
-  - "💼 Interview Questions": interview-questions.md
-  - "📋 Cheat Sheet": cheat-sheet.md
+  - Interview Questions: interview-questions.md
+  - Cheat Sheet: cheat-sheet.md
   - "Level 1 · Entry":
       - Overview: level-1/index.md
       - "01 · What FastAPI Is: ASGI, Starlette, Pydantic and One Request": level-1/01-what-fastapi-is.md
@@ -137,5 +137,5 @@ nav:
       - "08 · Advanced Patterns: Sub-Applications, Custom Routes & Error Contracts": level-4/08-advanced-patterns.md
       - "09 · Upgrading: Pydantic v1 to v2 and FastAPI Releases": level-4/09-upgrading.md
       - "10 · Capstone — A Production-Ready Event Booking API": level-4/10-capstone.md
-  - "🎯 Final Quiz": quiz.md
+  - Final Quiz: quiz.md
 
