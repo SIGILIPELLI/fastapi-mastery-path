@@ -81,12 +81,14 @@ extra:
     - name: "HTML & CSS"
       url: https://learnmasterypath.com/html-css-mastery-path/
 
+not_in_nav: |
+  privacy.md
+  license.md
+
 nav:
   - Home: index.md
   - "💼 Interview Questions": interview-questions.md
   - "📋 Cheat Sheet": cheat-sheet.md
-  - Privacy Policy: privacy.md
-  - License: license.md
   - "Level 1 · Entry":
       - Overview: level-1/index.md
       - "01 · What FastAPI Is: ASGI, Starlette, Pydantic and One Request": level-1/01-what-fastapi-is.md
