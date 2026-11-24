@@ -1,0 +1,3665 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A free FastAPI cheat sheet: 19 quick-reference tables from every level of the FastAPI Mastery Path, each linked to its full lesson.">
+      
+      
+      
+        <link rel="canonical" href="https://learnmasterypath.com/fastapi-mastery-path/cheat-sheet/">
+      
+      
+        <link rel="prev" href="../interview-questions/">
+      
+      
+        <link rel="next" href="../level-1/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.2">
+    
+    
+  
+  <title>FastAPI Cheat Sheet: Quick Reference, Beginner to Advanced</title>
+
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../stylesheets/progress-tracker.css">
+    
+      <link rel="stylesheet" href="../stylesheets/final-quiz.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-05VBGCXN12"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-05VBGCXN12');
+  </script>
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Mastery Path">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="FastAPI Cheat Sheet: Quick Reference, Beginner to Advanced">
+  <meta property="og:description" content="A free FastAPI cheat sheet: 19 quick-reference tables from every level of the FastAPI Mastery Path, each linked to its full lesson.">
+  <meta property="og:url" content="https://learnmasterypath.com/fastapi-mastery-path/cheat-sheet/">
+  <meta property="og:image" content="https://learnmasterypath.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Mastery Path: free structured courses, beginner to master">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="FastAPI Cheat Sheet: Quick Reference, Beginner to Advanced">
+  <meta name="twitter:description" content="A free FastAPI cheat sheet: 19 quick-reference tables from every level of the FastAPI Mastery Path, each linked to its full lesson.">
+  <meta name="twitter:image" content="https://learnmasterypath.com/og-image.png">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9440969811959397"
+     crossorigin="anonymous"></script><script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Mastery Path", "item": "https://learnmasterypath.com/"},
+      {"@type": "ListItem", "position": 2, "name": "FastAPI Mastery Path", "item": "https://learnmasterypath.com/fastapi-mastery-path/"},
+      {"@type": "ListItem", "position": 3, "name": "Cheat Sheet", "item": "https://learnmasterypath.com/fastapi-mastery-path/cheat-sheet/"}
+    ]
+  }
+  </script>
+  <style>
+    .md-banner a:hover { text-decoration: underline !important; }
+    .mp-related { margin-top: 2.4rem; padding-top: 1rem; border-top: 1px solid var(--md-default-fg-color--lightest); font-size: .78rem; }
+    .mp-related h2 { font-size: .9rem; margin: 0 0 .5rem; }
+    .mp-related ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: .4rem .9rem; }
+    .mp-related li { margin: 0 !important; }
+  </style>
+  <script type="application/json" id="mp-course-meta">{"home": false, "id": "fastapi-mastery-path", "name": "FastAPI Mastery Path", "repo": "https://github.com/sigilipelli/fastapi-mastery-path", "src": "cheat-sheet.md", "url": "https://learnmasterypath.com/fastapi-mastery-path/"}</script>
+  <link rel="stylesheet" href="https://learnmasterypath.com/assets/learn.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="https://learnmasterypath.com/assets/course.css?v=1">
+  <script src="https://learnmasterypath.com/assets/learn.js" defer></script>
+  <script src="https://learnmasterypath.com/assets/signup.js" defer></script>
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#fastapi-cheat-sheet" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+  <a href="https://learnmasterypath.com/" style="color: inherit; text-decoration: none;">
+    &larr; Mastery Path &middot; all 100+ free courses
+  </a>
+  <span style="opacity: .6; margin: 0 .6em;">|</span>
+  <a href="https://learnmasterypath.com/search/" style="color: inherit; text-decoration: none;">Search all courses</a>
+  <span style="opacity: .6; margin: 0 .6em;">|</span>
+  <a href="https://learnmasterypath.com/resume/" style="color: inherit; font-weight: 700; text-decoration: none;">
+    Got the skills? Free resume ATS check &rarr;
+  </a>
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="FastAPI Mastery Path" class="md-header__button md-logo" aria-label="FastAPI Mastery Path" data-md-component="logo">
+      <svg class="mp-mark" viewBox="0 0 160 160" role="img" aria-label="Mastery Path logo">
+  <circle cx="80" cy="80" r="74" fill="#FAF7EF" stroke="#2FA98D" stroke-width="5"/>
+  <rect class="mp-bar mp-bar-1" x="36" y="90" width="17" height="24" rx="5" fill="#2FA98D"/>
+  <rect class="mp-bar mp-bar-2" x="59" y="74" width="17" height="40" rx="5" fill="#7FC9B7"/>
+  <rect class="mp-bar mp-bar-3" x="82" y="56" width="17" height="58" rx="5" fill="#E0B457"/>
+  <rect class="mp-bar mp-bar-4" x="105" y="38" width="17" height="76" rx="5" fill="#C97B4A"/>
+  <circle class="mp-dot" cx="44.5" cy="82" r="7" fill="#22261f"/>
+</svg>
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            FastAPI Mastery Path
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              FastAPI Cheat Sheet: Quick Reference, Beginner to Advanced
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="cyan"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="cyan"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/sigilipelli/fastapi-mastery-path" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    fastapi-mastery-path
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../interview-questions/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Interview Questions
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Cheat Sheet
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../level-1/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Level 1 · Entry
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../level-2/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Level 2 · Intermediate
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../level-3/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Level 3 · Advanced
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../level-4/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Level 4 · Master
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../quiz/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Final Quiz
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="FastAPI Mastery Path" class="md-nav__button md-logo" aria-label="FastAPI Mastery Path" data-md-component="logo">
+      <svg class="mp-mark" viewBox="0 0 160 160" role="img" aria-label="Mastery Path logo">
+  <circle cx="80" cy="80" r="74" fill="#FAF7EF" stroke="#2FA98D" stroke-width="5"/>
+  <rect class="mp-bar mp-bar-1" x="36" y="90" width="17" height="24" rx="5" fill="#2FA98D"/>
+  <rect class="mp-bar mp-bar-2" x="59" y="74" width="17" height="40" rx="5" fill="#7FC9B7"/>
+  <rect class="mp-bar mp-bar-3" x="82" y="56" width="17" height="58" rx="5" fill="#E0B457"/>
+  <rect class="mp-bar mp-bar-4" x="105" y="38" width="17" height="76" rx="5" fill="#C97B4A"/>
+  <circle class="mp-dot" cx="44.5" cy="82" r="7" fill="#22261f"/>
+</svg>
+    </a>
+    FastAPI Mastery Path
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/sigilipelli/fastapi-mastery-path" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    fastapi-mastery-path
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../interview-questions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Interview Questions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cheat Sheet
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cheat Sheet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#level-1-entry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Level 1 · Entry
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Level 1 · Entry">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#01-what-fastapi-is-asgi-starlette-pydantic-and-one-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        01 · What FastAPI Is: ASGI, Starlette, Pydantic and One Request
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#02-installing-fastapi-your-first-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        02 · Installing FastAPI &amp; Your First App
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#03-path-query-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        03 · Path &amp; Query Parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#04-request-bodies-with-pydantic-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        04 · Request Bodies with Pydantic Models
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#05-response-models-status-codes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        05 · Response Models &amp; Status Codes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#06-pydantic-v2-in-depth-fields-validators-serialization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        06 · Pydantic v2 in Depth: Fields, Validators &amp; Serialization
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#07-errors-httpexception-validation-errors-handlers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        07 · Errors: HTTPException, Validation Errors &amp; Handlers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#08-forms-file-uploads-headers-cookies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        08 · Forms, File Uploads, Headers &amp; Cookies
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-project-an-in-memory-notes-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10 · Project — An In-Memory Notes API
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#level-2-intermediate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Level 2 · Intermediate
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Level 2 · Intermediate">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#03-async-def-vs-def-the-event-loop-and-the-threadpool" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        03 · async def vs def: The Event Loop and the Threadpool
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#09-pagination-filtering-sorting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        09 · Pagination, Filtering &amp; Sorting
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#level-3-advanced" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Level 3 · Advanced
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Level 3 · Advanced">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#02-jwt-access-tokens-refresh-tokens" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        02 · JWT Access Tokens &amp; Refresh Tokens
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#05-lifespan-events-background-tasks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        05 · Lifespan Events &amp; Background Tasks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#09-caching-etags-rate-limiting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        09 · Caching, ETags &amp; Rate Limiting
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-project-a-multi-user-authenticated-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10 · Project — A Multi-User Authenticated API
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#level-4-master" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Level 4 · Master
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Level 4 · Master">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#01-performance-finding-blocking-code-and-measuring-throughput" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        01 · Performance: Finding Blocking Code and Measuring Throughput
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#05-security-hardening-against-the-owasp-api-top-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        05 · Security Hardening Against the OWASP API Top 10
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#06-versioning-and-evolving-an-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        06 · Versioning and Evolving an API
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-capstone-a-production-ready-event-booking-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10 · Capstone — A Production-Ready Event Booking API
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../level-1/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Level 1 · Entry
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Level 1 · Entry
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-1/01-what-fastapi-is/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    01 · What FastAPI Is: ASGI, Starlette, Pydantic and One Request
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-1/02-first-app/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    02 · Installing FastAPI & Your First App
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-1/03-path-query-params/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    03 · Path & Query Parameters
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-1/04-request-bodies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    04 · Request Bodies with Pydantic Models
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-1/05-response-models/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    05 · Response Models & Status Codes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-1/06-pydantic-v2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    06 · Pydantic v2 in Depth: Fields, Validators & Serialization
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-1/07-errors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    07 · Errors: HTTPException, Validation Errors & Handlers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-1/08-forms-files-headers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    08 · Forms, File Uploads, Headers & Cookies
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-1/09-routers-structure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    09 · APIRouter & Project Structure
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-1/10-project-notes-api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10 · Project — An In-Memory Notes API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../level-2/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Level 2 · Intermediate
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Level 2 · Intermediate
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-2/01-dependency-injection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    01 · Dependency Injection with Depends
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-2/02-yield-dependencies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    02 · Yield Dependencies, Caching & Overrides
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-2/03-async-vs-sync/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    03 · async def vs def: The Event Loop and the Threadpool
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-2/04-sqlalchemy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    04 · SQLAlchemy 2.x with FastAPI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-2/05-async-sqlalchemy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    05 · Async SQLAlchemy, Relationships & N+1 Queries
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-2/06-alembic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    06 · Database Migrations with Alembic
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-2/07-settings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    07 · Configuration with pydantic-settings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-2/08-testing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    08 · Testing with TestClient & pytest
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-2/09-pagination-filtering/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    09 · Pagination, Filtering & Sorting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-2/10-project-bookshelf/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10 · Project — A Bookshelf API with a Database and Tests
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../level-3/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Level 3 · Advanced
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Level 3 · Advanced
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-3/01-password-auth/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    01 · Password Hashing & the OAuth2 Password Flow
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-3/02-jwt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    02 · JWT Access Tokens & Refresh Tokens
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-3/03-authorization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    03 · Authorization: Scopes, Roles & Ownership
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-3/04-middleware-cors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    04 · Middleware & CORS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-3/05-lifespan-background/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    05 · Lifespan Events & Background Tasks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-3/06-websockets-streaming/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    06 · WebSockets & Streaming Responses
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-3/07-openapi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    07 · Shaping the OpenAPI Schema
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-3/08-async-testing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    08 · Async Tests & Isolated Test Databases
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-3/09-caching-rate-limiting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    09 · Caching, ETags & Rate Limiting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-3/10-project-auth-api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10 · Project — A Multi-User Authenticated API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../level-4/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Level 4 · Master
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Level 4 · Master
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-4/01-performance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    01 · Performance: Finding Blocking Code and Measuring Throughput
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-4/02-deployment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    02 · Running in Production: Workers, Gunicorn & Containers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-4/03-reverse-proxy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    03 · Behind a Reverse Proxy: root_path, Forwarded Headers & HTTPS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-4/04-observability/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    04 · Observability: Structured Logs, Request IDs & Metrics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-4/05-security-hardening/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    05 · Security Hardening Against the OWASP API Top 10
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-4/06-versioning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    06 · Versioning and Evolving an API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-4/07-job-queues/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    07 · Long-Running Work: Job Queues and Polling
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-4/08-advanced-patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    08 · Advanced Patterns: Sub-Applications, Custom Routes & Error Contracts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-4/09-upgrading/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    09 · Upgrading: Pydantic v1 to v2 and FastAPI Releases
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-4/10-capstone/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10 · Capstone — A Production-Ready Event Booking API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quiz/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Final Quiz
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#level-1-entry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Level 1 · Entry
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Level 1 · Entry">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#01-what-fastapi-is-asgi-starlette-pydantic-and-one-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        01 · What FastAPI Is: ASGI, Starlette, Pydantic and One Request
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#02-installing-fastapi-your-first-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        02 · Installing FastAPI &amp; Your First App
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#03-path-query-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        03 · Path &amp; Query Parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#04-request-bodies-with-pydantic-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        04 · Request Bodies with Pydantic Models
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#05-response-models-status-codes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        05 · Response Models &amp; Status Codes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#06-pydantic-v2-in-depth-fields-validators-serialization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        06 · Pydantic v2 in Depth: Fields, Validators &amp; Serialization
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#07-errors-httpexception-validation-errors-handlers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        07 · Errors: HTTPException, Validation Errors &amp; Handlers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#08-forms-file-uploads-headers-cookies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        08 · Forms, File Uploads, Headers &amp; Cookies
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-project-an-in-memory-notes-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10 · Project — An In-Memory Notes API
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#level-2-intermediate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Level 2 · Intermediate
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Level 2 · Intermediate">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#03-async-def-vs-def-the-event-loop-and-the-threadpool" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        03 · async def vs def: The Event Loop and the Threadpool
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#09-pagination-filtering-sorting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        09 · Pagination, Filtering &amp; Sorting
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#level-3-advanced" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Level 3 · Advanced
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Level 3 · Advanced">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#02-jwt-access-tokens-refresh-tokens" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        02 · JWT Access Tokens &amp; Refresh Tokens
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#05-lifespan-events-background-tasks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        05 · Lifespan Events &amp; Background Tasks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#09-caching-etags-rate-limiting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        09 · Caching, ETags &amp; Rate Limiting
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-project-a-multi-user-authenticated-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10 · Project — A Multi-User Authenticated API
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#level-4-master" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Level 4 · Master
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Level 4 · Master">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#01-performance-finding-blocking-code-and-measuring-throughput" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        01 · Performance: Finding Blocking Code and Measuring Throughput
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#05-security-hardening-against-the-owasp-api-top-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        05 · Security Hardening Against the OWASP API Top 10
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#06-versioning-and-evolving-an-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        06 · Versioning and Evolving an API
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-capstone-a-production-ready-event-booking-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10 · Capstone — A Production-Ready Event Booking API
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+              
+              <article class="md-content__inner md-typeset">
+                
+  
+                  
+
+
+  
+  
+
+
+<h1 id="fastapi-cheat-sheet">FastAPI Cheat Sheet<a class="headerlink" href="#fastapi-cheat-sheet" title="Permanent link">&para;</a></h1>
+<p>Quick-reference tables from <strong>19 lessons</strong> of the free FastAPI Mastery Path, in course order from beginner to advanced. Each section links to the full lesson with explanations and runnable examples.</p>
+<h2 id="level-1-entry">Level 1 · Entry<a class="headerlink" href="#level-1-entry" title="Permanent link">&para;</a></h2>
+<h3 id="01-what-fastapi-is-asgi-starlette-pydantic-and-one-request"><a href="../level-1/01-what-fastapi-is/">01 · What FastAPI Is: ASGI, Starlette, Pydantic and One Request</a><a class="headerlink" href="#01-what-fastapi-is-asgi-starlette-pydantic-and-one-request" title="Permanent link">&para;</a></h3>
+<p><em>The three layers</em></p>
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>What it does</th>
+<th>You notice it when…</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ASGI server</strong> (Uvicorn)</td>
+<td>Owns the socket, speaks HTTP/1.1 or WebSocket, turns bytes into an event dictionary</td>
+<td>you start the app, tune workers, sit behind a proxy</td>
+</tr>
+<tr>
+<td><strong>Starlette</strong></td>
+<td>Routing, request/response objects, middleware, WebSockets, background tasks, test client</td>
+<td>you add middleware, stream a response, mount a sub-app</td>
+</tr>
+<tr>
+<td><strong>Pydantic</strong></td>
+<td>Data validation and serialization from type hints</td>
+<td>you define models, write validators, read a 422 error</td>
+</tr>
+<tr>
+<td><strong>FastAPI</strong></td>
+<td>Reads your function signatures, wires Starlette and Pydantic together, dependency injection, OpenAPI</td>
+<td>you write <code>@app.get(...)</code>, <code>Depends(...)</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="02-installing-fastapi-your-first-app"><a href="../level-1/02-first-app/">02 · Installing FastAPI &amp; Your First App</a><a class="headerlink" href="#02-installing-fastapi-your-first-app" title="Permanent link">&para;</a></h3>
+<p><em><code>fastapi run</code>: production mode</em></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><code>fastapi dev</code></th>
+<th><code>fastapi run</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto-reload</td>
+<td>on</td>
+<td>off</td>
+</tr>
+<tr>
+<td>Default host</td>
+<td><code>127.0.0.1</code></td>
+<td><code>0.0.0.0</code> (all interfaces)</td>
+</tr>
+<tr>
+<td>Intended for</td>
+<td>your laptop</td>
+<td>containers and servers</td>
+</tr>
+<tr>
+<td>Workers</td>
+<td>1</td>
+<td>1 unless you pass <code>--workers N</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="03-path-query-parameters"><a href="../level-1/03-path-query-params/">03 · Path &amp; Query Parameters</a><a class="headerlink" href="#03-path-query-parameters" title="Permanent link">&para;</a></h3>
+<p><em>How booleans are parsed</em></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>true</code>, <code>1</code>, <code>on</code>, <code>yes</code></td>
+<td><code>True</code></td>
+</tr>
+<tr>
+<td><code>false</code>, <code>0</code>, <code>off</code>, <code>no</code></td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>maybe</code></td>
+<td><code>422 bool_parsing</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="04-request-bodies-with-pydantic-models"><a href="../level-1/04-request-bodies/">04 · Request Bodies with Pydantic Models</a><a class="headerlink" href="#04-request-bodies-with-pydantic-models" title="Permanent link">&para;</a></h3>
+<p><em>Broken JSON and wrong content types</em></p>
+<table>
+<thead>
+<tr>
+<th>Content-Type</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>(none)</em></td>
+<td><code>422 model_attributes_type</code> — body treated as a plain string</td>
+</tr>
+<tr>
+<td><code>text/plain</code></td>
+<td><code>422 model_attributes_type</code></td>
+</tr>
+<tr>
+<td><code>application/vnd.api+json</code></td>
+<td><code>201</code> — any <code>+json</code> type is parsed as JSON</td>
+</tr>
+<tr>
+<td><code>application/x-www-form-urlencoded</code> with <code>title=Dune</code></td>
+<td><code>422 model_attributes_type</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="05-response-models-status-codes"><a href="../level-1/05-response-models/">05 · Response Models &amp; Status Codes</a><a class="headerlink" href="#05-response-models-status-codes" title="Permanent link">&para;</a></h3>
+<p><em>Status codes</em></p>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Meaning</th>
+<th>Typical use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>200 OK</td>
+<td>success with a body</td>
+<td><code>GET</code>, most <code>PUT</code>/<code>PATCH</code></td>
+</tr>
+<tr>
+<td>201 Created</td>
+<td>a new resource exists</td>
+<td><code>POST</code> that creates</td>
+</tr>
+<tr>
+<td>204 No Content</td>
+<td>success, nothing to say</td>
+<td><code>DELETE</code></td>
+</tr>
+<tr>
+<td>400 / 422</td>
+<td>the request was wrong</td>
+<td>bad input (422 is FastAPI's default)</td>
+</tr>
+<tr>
+<td>404 Not Found</td>
+<td>no such resource</td>
+<td>unknown ID</td>
+</tr>
+<tr>
+<td>409 Conflict</td>
+<td>the state forbids it</td>
+<td>duplicate email</td>
+</tr>
+</tbody>
+</table>
+<h3 id="06-pydantic-v2-in-depth-fields-validators-serialization"><a href="../level-1/06-pydantic-v2/">06 · Pydantic v2 in Depth: Fields, Validators &amp; Serialization</a><a class="headerlink" href="#06-pydantic-v2-in-depth-fields-validators-serialization" title="Permanent link">&para;</a></h3>
+<p><em>Reading the pieces</em></p>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>What it's for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Field(...)</code></td>
+<td>constraints (<code>gt</code>, <code>max_length</code>, <code>decimal_places</code>), defaults, <code>default_factory</code>, aliases, docs (<code>description</code>, <code>examples</code>)</td>
+</tr>
+<tr>
+<td><code>Annotated[T, ...]</code></td>
+<td>attach validators and constraints to a type, then reuse that type anywhere (<code>ISBN</code>, <code>Tag</code>)</td>
+</tr>
+<tr>
+<td><code>BeforeValidator</code></td>
+<td>runs on the raw input, <em>before</em> type conversion — good for normalising</td>
+</tr>
+<tr>
+<td><code>AfterValidator</code></td>
+<td>runs on the already-converted value — good for rules</td>
+</tr>
+<tr>
+<td><code>@field_validator</code></td>
+<td>the same, written as a method; handy when the rule belongs to one model</td>
+</tr>
+<tr>
+<td><code>@model_validator</code></td>
+<td>rules that involve several fields</td>
+</tr>
+<tr>
+<td><code>@computed_field</code></td>
+<td>derived values included in output and schema</td>
+</tr>
+<tr>
+<td><code>@field_serializer</code></td>
+<td>control how a field is written out</td>
+</tr>
+<tr>
+<td><code>model_config</code></td>
+<td>model-wide behaviour (<code>extra</code>, <code>strict</code>, <code>str_strip_whitespace</code>, …)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="07-errors-httpexception-validation-errors-handlers"><a href="../level-1/07-errors/">07 · Errors: HTTPException, Validation Errors &amp; Handlers</a><a class="headerlink" href="#07-errors-httpexception-validation-errors-handlers" title="Permanent link">&para;</a></h3>
+<p><em>Worked example: picking status codes for a "buy" endpoint</em></p>
+<table>
+<thead>
+<tr>
+<th>Situation</th>
+<th>Status</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>unknown book ID</td>
+<td>404</td>
+<td>the resource doesn't exist</td>
+</tr>
+<tr>
+<td>quantity is <code>0</code> or <code>"lots"</code></td>
+<td>422</td>
+<td>invalid input, let validation do it</td>
+</tr>
+<tr>
+<td>book exists, none in stock</td>
+<td>409</td>
+<td>request is valid, current <em>state</em> forbids it</td>
+</tr>
+<tr>
+<td>user not logged in</td>
+<td>401 + <code>WWW-Authenticate</code></td>
+<td>missing/invalid credentials</td>
+</tr>
+<tr>
+<td>logged in, but account suspended</td>
+<td>403</td>
+<td>identity known, not allowed</td>
+</tr>
+<tr>
+<td>payment provider timed out</td>
+<td>502 or 503</td>
+<td>upstream failure, retry may work</td>
+</tr>
+<tr>
+<td>your code raised <code>KeyError</code></td>
+<td>500</td>
+<td>a bug</td>
+</tr>
+</tbody>
+</table>
+<h3 id="08-forms-file-uploads-headers-cookies"><a href="../level-1/08-forms-files-headers/">08 · Forms, File Uploads, Headers &amp; Cookies</a><a class="headerlink" href="#08-forms-file-uploads-headers-cookies" title="Permanent link">&para;</a></h3>
+<p><em>File uploads</em></p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>filename</code></td>
+<td>the name <strong>the client claims</strong></td>
+</tr>
+<tr>
+<td><code>content_type</code></td>
+<td>the type <strong>the client claims</strong></td>
+</tr>
+<tr>
+<td><code>size</code></td>
+<td>bytes received, when known</td>
+</tr>
+<tr>
+<td><code>file</code></td>
+<td>a <code>SpooledTemporaryFile</code> — in memory while small, on disk when large</td>
+</tr>
+<tr>
+<td><code>read()</code>, <code>seek()</code>, <code>write()</code>, <code>close()</code></td>
+<td>async wrappers around <code>file</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="10-project-an-in-memory-notes-api"><a href="../level-1/10-project-notes-api/">10 · Project — An In-Memory Notes API</a><a class="headerlink" href="#10-project-an-in-memory-notes-api" title="Permanent link">&para;</a></h3>
+<p><em>What you're building</em></p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Path</th>
+<th>Purpose</th>
+<th>Success</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>GET</code></td>
+<td><code>/notes</code></td>
+<td>search + paginate (<code>q</code>, <code>tag</code>, <code>pinned</code>, <code>limit</code>, <code>offset</code>)</td>
+<td>200</td>
+</tr>
+<tr>
+<td><code>POST</code></td>
+<td><code>/notes</code></td>
+<td>create</td>
+<td>201 + <code>Location</code></td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/notes/{note_id}</code></td>
+<td>fetch one</td>
+<td>200 / 404</td>
+</tr>
+<tr>
+<td><code>PATCH</code></td>
+<td><code>/notes/{note_id}</code></td>
+<td>change only the sent fields</td>
+<td>200 / 404 / 422</td>
+</tr>
+<tr>
+<td><code>DELETE</code></td>
+<td><code>/notes/{note_id}</code></td>
+<td>remove</td>
+<td>204 / 404</td>
+</tr>
+</tbody>
+</table>
+<h2 id="level-2-intermediate">Level 2 · Intermediate<a class="headerlink" href="#level-2-intermediate" title="Permanent link">&para;</a></h2>
+<h3 id="03-async-def-vs-def-the-event-loop-and-the-threadpool"><a href="../level-2/03-async-vs-sync/">03 · <code>async def</code> vs <code>def</code>: The Event Loop and the Threadpool</a><a class="headerlink" href="#03-async-def-vs-def-the-event-loop-and-the-threadpool" title="Permanent link">&para;</a></h3>
+<p><em>The decision rule</em></p>
+<table>
+<thead>
+<tr>
+<th>Your code…</th>
+<th>Write</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>awaits async libraries only (<code>httpx.AsyncClient</code>, <code>asyncpg</code>, async SQLAlchemy)</td>
+<td><code>async def</code></td>
+<td>no thread hop, high concurrency</td>
+</tr>
+<tr>
+<td>calls any blocking library (<code>requests</code>, sync SQLAlchemy, <code>boto3</code>, file I/O)</td>
+<td><code>def</code></td>
+<td>keeps the loop free</td>
+</tr>
+<tr>
+<td>is mostly async but has one blocking call</td>
+<td><code>async def</code> + <code>await run_in_threadpool(fn, ...)</code></td>
+<td>offload just that call</td>
+</tr>
+<tr>
+<td>is CPU-heavy (image resizing, big JSON, ML inference)</td>
+<td><code>def</code>, or a process pool / job queue</td>
+<td>threads still share the GIL for pure-Python work</td>
+</tr>
+<tr>
+<td>does trivial work (return a constant, read settings)</td>
+<td>either</td>
+<td><code>async def</code> avoids a thread hop</td>
+</tr>
+</tbody>
+</table>
+<h3 id="09-pagination-filtering-sorting"><a href="../level-2/09-pagination-filtering/">09 · Pagination, Filtering &amp; Sorting</a><a class="headerlink" href="#09-pagination-filtering-sorting" title="Permanent link">&para;</a></h3>
+<p><em>Which to use</em></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Offset</th>
+<th>Cursor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Jump to page 37</td>
+<td>yes</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Total count</td>
+<td>natural (but costs a query)</td>
+<td>usually omitted</td>
+</tr>
+<tr>
+<td>Stable under inserts/deletes</td>
+<td>no</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Fast deep in the list</td>
+<td>no</td>
+<td>yes, with an index</td>
+</tr>
+<tr>
+<td>Change sort order mid-stream</td>
+<td>easy</td>
+<td>the cursor is tied to one sort</td>
+</tr>
+</tbody>
+</table>
+<h2 id="level-3-advanced">Level 3 · Advanced<a class="headerlink" href="#level-3-advanced" title="Permanent link">&para;</a></h2>
+<h3 id="02-jwt-access-tokens-refresh-tokens"><a href="../level-3/02-jwt/">02 · JWT Access Tokens &amp; Refresh Tokens</a><a class="headerlink" href="#02-jwt-access-tokens-refresh-tokens" title="Permanent link">&para;</a></h3>
+<p><em>What a JWT is</em></p>
+<table>
+<thead>
+<tr>
+<th>Claim</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>sub</code></td>
+<td>subject — who the token is about</td>
+</tr>
+<tr>
+<td><code>exp</code></td>
+<td>expiry time; PyJWT rejects the token after it</td>
+</tr>
+<tr>
+<td><code>iat</code></td>
+<td>issued-at time</td>
+</tr>
+<tr>
+<td><code>iss</code></td>
+<td>issuer — who created it</td>
+</tr>
+<tr>
+<td><code>jti</code></td>
+<td>a unique token ID, useful for revocation lists</td>
+</tr>
+</tbody>
+</table>
+<h3 id="05-lifespan-events-background-tasks"><a href="../level-3/05-lifespan-background/">05 · Lifespan Events &amp; Background Tasks</a><a class="headerlink" href="#05-lifespan-events-background-tasks" title="Permanent link">&para;</a></h3>
+<p><em>What belongs in lifespan</em></p>
+<table>
+<thead>
+<tr>
+<th>Good fit</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>database engine / connection pool</td>
+<td>one per process, reused by every request</td>
+</tr>
+<tr>
+<td><code>httpx.AsyncClient</code> for calling other APIs</td>
+<td>connection pooling, keep-alive</td>
+</tr>
+<tr>
+<td>ML model or large lookup table</td>
+<td>expensive to load, read-only afterwards</td>
+</tr>
+<tr>
+<td>cache or message-broker client</td>
+<td>long-lived connection</td>
+</tr>
+</tbody>
+</table>
+<h3 id="09-caching-etags-rate-limiting"><a href="../level-3/09-caching-rate-limiting/">09 · Caching, ETags &amp; Rate Limiting</a><a class="headerlink" href="#09-caching-etags-rate-limiting" title="Permanent link">&para;</a></h3>
+<p><em>ETags and conditional GET</em></p>
+<table>
+<thead>
+<tr>
+<th>Header</th>
+<th>Meaning</th>
+<th>Use for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>no-store</code></td>
+<td>don't keep it at all</td>
+<td>sensitive data</td>
+</tr>
+<tr>
+<td><code>private, max-age=0, must-revalidate</code></td>
+<td>keep, but revalidate each time (ETag)</td>
+<td>per-user data that changes</td>
+</tr>
+<tr>
+<td><code>public, max-age=300</code></td>
+<td>anyone may cache it for 5 minutes</td>
+<td>public catalogue data</td>
+</tr>
+<tr>
+<td><code>public, max-age=31536000, immutable</code></td>
+<td>cache "forever"</td>
+<td>versioned static files</td>
+</tr>
+</tbody>
+</table>
+<h3 id="10-project-a-multi-user-authenticated-api"><a href="../level-3/10-project-auth-api/">10 · Project — A Multi-User Authenticated API</a><a class="headerlink" href="#10-project-a-multi-user-authenticated-api" title="Permanent link">&para;</a></h3>
+<p><em>Requirements</em></p>
+<table>
+<thead>
+<tr>
+<th>Area</th>
+<th>Rule</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sign-up</td>
+<td>lower-case username 3–30 chars (<code>a-z0-9_</code>); password 12–128 chars, not on a common-password list; stored as Argon2id</td>
+</tr>
+<tr>
+<td>Login</td>
+<td>OAuth2 password form; identical errors for "no user" and "wrong password"; constant-cost check; 5 attempts burst, 5/minute per username</td>
+</tr>
+<tr>
+<td>Tokens</td>
+<td>15-minute access JWT with scopes; 7-day refresh JWT, <strong>rotated</strong> on use; reuse of an old refresh token revokes the whole family; logout revokes the family</td>
+</tr>
+<tr>
+<td>Bookmarks</td>
+<td>users see and change only their own; an owner may mark a bookmark public; anyone can list a user's public bookmarks</td>
+</tr>
+<tr>
+<td>Admin</td>
+<td>needs the <code>admin</code> scope <em>and</em> an admin account; can list and disable users; disabled users lose access immediately</td>
+</tr>
+<tr>
+<td>Data</td>
+<td>async SQLAlchemy on SQLite via aiosqlite; schema via Alembic's async template; UTC timestamps</td>
+</tr>
+</tbody>
+</table>
+<h2 id="level-4-master">Level 4 · Master<a class="headerlink" href="#level-4-master" title="Permanent link">&para;</a></h2>
+<h3 id="01-performance-finding-blocking-code-and-measuring-throughput"><a href="../level-4/01-performance/">01 · Performance: Finding Blocking Code and Measuring Throughput</a><a class="headerlink" href="#01-performance-finding-blocking-code-and-measuring-throughput" title="Permanent link">&para;</a></h3>
+<p><em>Load testing with <code>ab</code></em></p>
+<table>
+<thead>
+<tr>
+<th>Endpoint</th>
+<th>Requests/s</th>
+<th>Mean time per request (c=10)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/ping</code> (n=2000, c=20)</td>
+<td>11,575</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>/items-annotated</code> (returns models)</td>
+<td>2,446</td>
+<td>4.1 ms</td>
+</tr>
+<tr>
+<td><code>/items-prebuilt</code> (<code>json.dumps</code> yourself)</td>
+<td>1,625</td>
+<td>6.2 ms</td>
+</tr>
+<tr>
+<td><code>/items-model</code> (dicts + <code>response_model</code>)</td>
+<td>804</td>
+<td>12.4 ms</td>
+</tr>
+<tr>
+<td><code>/items-raw</code> (<strong>no</strong> response model)</td>
+<td>156</td>
+<td>64.2 ms</td>
+</tr>
+</tbody>
+</table>
+<h3 id="05-security-hardening-against-the-owasp-api-top-10"><a href="../level-4/05-security-hardening/">05 · Security Hardening Against the OWASP API Top 10</a><a class="headerlink" href="#05-security-hardening-against-the-owasp-api-top-10" title="Permanent link">&para;</a></h3>
+<p><em>The list, mapped to this course</em></p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Risk</th>
+<th>Where it's handled</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>API1</td>
+<td>Broken Object Level Authorization</td>
+<td>Level 3 lesson 3 — ownership in the query</td>
+</tr>
+<tr>
+<td>API2</td>
+<td>Broken Authentication</td>
+<td>Level 3 lessons 1–2 — Argon2, timing, token checks</td>
+</tr>
+<tr>
+<td>API3</td>
+<td>Broken Object Property Level Authorization</td>
+<td>below — mass assignment; Level 1 lesson 5 for over-exposure</td>
+</tr>
+<tr>
+<td>API4</td>
+<td>Unrestricted Resource Consumption</td>
+<td>below — body limits; Level 2 lesson 9 (page sizes), Level 3 lesson 9 (rate limits)</td>
+</tr>
+<tr>
+<td>API5</td>
+<td>Broken Function Level Authorization</td>
+<td>Level 3 lesson 3 — role/scope dependencies on routers</td>
+</tr>
+<tr>
+<td>API6</td>
+<td>Unrestricted Access to Sensitive Business Flows</td>
+<td>rate limits + business rules (e.g. one coupon per account)</td>
+</tr>
+<tr>
+<td>API7</td>
+<td>Server-Side Request Forgery</td>
+<td>below</td>
+</tr>
+<tr>
+<td>API8</td>
+<td>Security Misconfiguration</td>
+<td>below — debug mode, CORS (Level 3 lesson 4), docs exposure</td>
+</tr>
+<tr>
+<td>API9</td>
+<td>Improper Inventory Management</td>
+<td>Level 4 lesson 6 — versioning and retiring old APIs</td>
+</tr>
+<tr>
+<td>API10</td>
+<td>Unsafe Consumption of APIs</td>
+<td>validate third-party responses with Pydantic; timeouts (Level 2 lesson 3)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="06-versioning-and-evolving-an-api"><a href="../level-4/06-versioning/">06 · Versioning and Evolving an API</a><a class="headerlink" href="#06-versioning-and-evolving-an-api" title="Permanent link">&para;</a></h3>
+<p><em>Additive vs breaking</em></p>
+<table>
+<thead>
+<tr>
+<th>Change</th>
+<th>Response (server → client)</th>
+<th>Request (client → server)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>add an optional field</td>
+<td>safe</td>
+<td>safe (if it has a default)</td>
+</tr>
+<tr>
+<td>add a <strong>required</strong> field</td>
+<td>safe</td>
+<td><strong>breaking</strong> — old clients don't send it</td>
+</tr>
+<tr>
+<td>remove a field</td>
+<td><strong>breaking</strong> — clients may read it</td>
+<td>safe-ish (old clients still send it; reject or ignore)</td>
+</tr>
+<tr>
+<td>rename a field</td>
+<td><strong>breaking</strong></td>
+<td><strong>breaking</strong></td>
+</tr>
+<tr>
+<td>change a type (<code>float</code> → <code>int</code>, string → object)</td>
+<td><strong>breaking</strong></td>
+<td><strong>breaking</strong></td>
+</tr>
+<tr>
+<td>add an endpoint</td>
+<td>safe</td>
+<td>—</td>
+</tr>
+<tr>
+<td>remove an endpoint</td>
+<td><strong>breaking</strong></td>
+<td>—</td>
+</tr>
+<tr>
+<td>add a new enum value</td>
+<td>can break clients with exhaustive <code>switch</code>es</td>
+<td>safe</td>
+</tr>
+<tr>
+<td>tighten validation (shorter max length)</td>
+<td>—</td>
+<td><strong>breaking</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="10-capstone-a-production-ready-event-booking-api"><a href="../level-4/10-capstone/">10 · Capstone — A Production-Ready Event Booking API</a><a class="headerlink" href="#10-capstone-a-production-ready-event-booking-api" title="Permanent link">&para;</a></h3>
+<p><em>Requirements</em></p>
+<table>
+<thead>
+<tr>
+<th>Area</th>
+<th>Rule</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Events</td>
+<td>organisers (scope <code>events:write</code>) create events with a timezone-aware start time and a capacity; anyone can read them</td>
+</tr>
+<tr>
+<td>Bookings</td>
+<td>attendees (scope <code>bookings</code>) book 1–10 seats; sold out → 409; event started → 409; cancel returns seats; cancel is idempotent</td>
+</tr>
+<tr>
+<td>Retries</td>
+<td>an <code>Idempotency-Key</code> header makes a booking request safe to retry: same key, same booking</td>
+</tr>
+<tr>
+<td>Auth</td>
+<td>tokens come from an identity provider; the API verifies signature, expiry, issuer and audience — it never handles passwords</td>
+</tr>
+<tr>
+<td>Errors</td>
+<td>every error is <code>application/problem+json</code> with a <code>request_id</code></td>
+</tr>
+<tr>
+<td>Ops</td>
+<td>JSON access logs; <code>X-Request-ID</code> on every response; 16 KB body limit; <code>/health/live</code> and <code>/health/ready</code>; docs off in prod</td>
+</tr>
+<tr>
+<td>Config</td>
+<td>the app refuses to start in prod with a short secret, SQLite, or wildcard CORS</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p>Go deeper with the full <a href="../">FastAPI Mastery Path</a> curriculum or test yourself with the <a href="../interview-questions/">interview questions</a>.</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+  
+  <nav class="mp-related" aria-label="Related free courses">
+    <h2>Related free courses</h2>
+    <ul>
+      <li><a href="https://learnmasterypath.com/react-mastery-path/">React</a></li><li><a href="https://learnmasterypath.com/nextjs-mastery-path/">Next.js</a></li><li><a href="https://learnmasterypath.com/angular-mastery-path/">Angular</a></li><li><a href="https://learnmasterypath.com/vue-mastery-path/">Vue.js</a></li><li><a href="https://learnmasterypath.com/html-css-mastery-path/">HTML & CSS</a></li>
+      <li><a href="https://learnmasterypath.com/">All 100+ courses &rarr;</a></li>
+    </ul>
+  </nav>
+  
+
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../interview-questions/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Interview Questions">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Interview Questions
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../level-1/" class="md-footer__link md-footer__link--next" aria-label="Next: Overview">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Overview
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+  <div class="mp-foot">
+    <div class="mp-foot-inner">
+      <a class="mp-foot-brand" href="https://learnmasterypath.com/"><svg class="mp-mark" viewBox="0 0 160 160" role="img" aria-label="Mastery Path logo">
+  <circle cx="80" cy="80" r="74" fill="#FAF7EF" stroke="#2FA98D" stroke-width="5"/>
+  <rect class="mp-bar mp-bar-1" x="36" y="90" width="17" height="24" rx="5" fill="#2FA98D"/>
+  <rect class="mp-bar mp-bar-2" x="59" y="74" width="17" height="40" rx="5" fill="#7FC9B7"/>
+  <rect class="mp-bar mp-bar-3" x="82" y="56" width="17" height="58" rx="5" fill="#E0B457"/>
+  <rect class="mp-bar mp-bar-4" x="105" y="38" width="17" height="76" rx="5" fill="#C97B4A"/>
+  <circle class="mp-dot" cx="44.5" cy="82" r="7" fill="#22261f"/>
+</svg><span>Mastery Path</span></a>
+      <nav class="mp-sitelinks" aria-label="Site and legal links">
+        <a href="https://learnmasterypath.com/">All courses</a>
+        <a href="https://learnmasterypath.com/about.html">About</a>
+        <a href="https://learnmasterypath.com/contact.html">Contact</a>
+        <a href="https://learnmasterypath.com/fastapi-mastery-path/privacy/">Privacy Policy</a>
+        <a href="https://learnmasterypath.com/terms.html">Terms</a>
+        <a href="https://learnmasterypath.com/fastapi-mastery-path/license/">License</a>
+        <a href="https://learnmasterypath.com/verify/">Verify a certificate</a>
+      </nav>
+    </div>
+    <p class="mp-license-note">
+      © 2026 Vinod Kumar Sigilipelli · Except where otherwise noted, lesson content is licensed under
+      <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> and code examples under the
+      <a href="https://opensource.org/license/mit">MIT License</a>.
+    </p>
+  </div>
+
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.path", "navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "navigation.footer", "navigation.indexes", "toc.follow", "content.code.copy", "content.code.annotate", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+        <script src="../javascripts/progress-tracker.js"></script>
+      
+        <script src="../javascripts/final-quiz.js"></script>
+      
+    
+  </body>
+</html>
