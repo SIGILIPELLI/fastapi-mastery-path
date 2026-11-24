@@ -1,6 +1,6 @@
 ---
 title: "Free FastAPI Course: Pydantic v2, Dependency Injection, Async, SQLAlchemy, Auth, Testing & Deployment"
-description: "Free FastAPI course: 40 lessons on Pydantic v2, dependency injection, async, SQLAlchemy 2.x, Alembic, OAuth2 and JWT, testing and production deployment."
+description: "Free FastAPI course: 36 lessons and 4 projects on Pydantic v2, dependency injection, async, SQLAlchemy 2.x, Alembic, OAuth2 and JWT, testing and production deployment."
 ---
 
 # FastAPI Mastery Path
